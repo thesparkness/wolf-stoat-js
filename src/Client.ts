@@ -199,7 +199,7 @@ export class Client extends AsyncEventEmitter<Events> {
     super();
 
     this.options = {
-      baseURL: "https://stoat.chat/api",
+      baseURL: "https://community.wolfofwashington.org/api",
       partials: false,
       eagerFetching: true,
       syncUnreads: false,
@@ -317,7 +317,7 @@ export class Client extends AsyncEventEmitter<Events> {
     this.events.disconnect();
     this.#setReady(false);
     this.events.connect(
-      this.configuration?.ws ?? "wss://stoat.chat/events",
+      this.configuration?.ws ?? "wss://community.wolfofwashington.org/events",
       typeof this.#session === "string" ? this.#session : this.#session!.token,
     );
   }
